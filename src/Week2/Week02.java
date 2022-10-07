@@ -27,6 +27,10 @@ public class Week02
     {
         String value = InputReader.getString("Please enter your grade > ");
         
+        char letter;
+
+        letter = value.charAt(0);
+        
         if(value.equals("A"))
         {
             System.out.println("Your grade is First Class");
