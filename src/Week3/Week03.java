@@ -1,4 +1,5 @@
 package Week3;
+import helpers.*;
 
 public class Week03 
 {
@@ -15,6 +16,36 @@ public class Week03
         System.out.println();
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
+
+        createStudent();
+        createCourse();
     }     
     
+    public static void createCourse()
+    {
+
+    }
+
+    private static void createStudent() 
+    {
+        String name = "anon";
+
+        System.out.println();
+        String id = InputReader.getString("Please enter your id > ");
+        
+        boolean isValid = false;
+        while(!isValid)
+        {
+            name = InputReader.getString("Please enter your name > ");
+            String answer = InputReader.getString(name + " is this name correct > ");
+
+            if(answer.contains("yes"))
+            {
+                isValid = true;
+            }
+        }
+        
+        Student derek = new Student(id, name);
+        derek.print();
+    }         
 }
