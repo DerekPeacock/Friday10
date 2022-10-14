@@ -11,4 +11,9 @@ public class Course
        this.code = code;
        this.title = title;
     }
+
+    public void print()
+    {
+        System.out.println(title + " (" + code + ")");
+    }
 }

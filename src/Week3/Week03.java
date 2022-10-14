@@ -4,6 +4,10 @@ import helpers.*;
 public class Week03 
 {
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
+
+    private static Student derek;
+    private static Course myCourse;
+
     public static void main(String[] args)
     {
         System.out.println(CONSOLE_CLEAR);
@@ -19,11 +23,24 @@ public class Week03
 
         createStudent();
         createCourse();
+        enrolStudent();
     }     
+
+    public static void enrolStudent()
+    {
+        derek.enrol(myCourse);
+        derek.print();
+    }
     
     public static void createCourse()
     {
+        String code = null;
+        String title = null;
 
+        code = InputReader.getString("Please enter your course code > ");
+        title = InputReader.getString("Please enter your course title > ");
+
+        Course myCourse = new Course(code, title);
     }
 
     private static void createStudent() 
