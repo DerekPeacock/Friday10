@@ -11,8 +11,13 @@ public class Student
         this.fullName = fullName;
     }
 
+    public void enrol(Course course)
+    {
+        //this.course = course;
+    }
+
     public void print()
     {
-        System.out.println(" \nStudent " + id + " " + fullName);
+        System.out.println(id + " " + fullName);
     }    
 }
