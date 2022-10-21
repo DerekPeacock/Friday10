@@ -44,6 +44,11 @@ public class Songlist
 
     private void displayMenu() 
     {
+        System.out.println("\n 1. Add Student");
+        System.out.println(" 2. Delete Student");
+        System.out.println(" 3. Print All Students");
+        System.out.println(" 4. Quit\n");
+
     }
 
     /**
@@ -53,7 +58,12 @@ public class Songlist
      */
     private void addSong()
     {
+        System.out.println(" Adding a Student");
+        String id = InputReader.getString("Please enter the student id >");
+        String name = InputReader.getString("Please enter the student name >");
 
+        Student student = new Student(id, name);
+        students.add(student);
     }
 
     private void deleteSong()
@@ -68,6 +78,11 @@ public class Songlist
 
     private void printSongs()
     {
-
+        System.out.println("\nPrinting All Students\n");
+        
+        for(Student student : students)
+        {
+            student.print();
+        }
     }
 }
