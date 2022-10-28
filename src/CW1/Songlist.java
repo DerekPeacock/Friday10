@@ -15,12 +15,21 @@ import helpers.*;
  */
 public class Songlist 
 {
-    private ArrayList<Student> students;
+    private ArrayList<Song> songs;
 
     public Songlist() 
     {
-        students = new ArrayList<Student>();
+        songs = new ArrayList<Song>();
+        addSomeSongs();
         doMainMenu();
+    }
+
+    private void addSomeSongs() 
+    {
+        Song song = new Song("Bad Habits", "Ed Sheeran", 123456);
+        songs.add(song);
+
+        song = new Song(null, null, 0);
     }
 
     private void doMainMenu() 
@@ -58,12 +67,13 @@ public class Songlist
      */
     private void addSong()
     {
-        System.out.println(" Adding a Student");
-        String id = InputReader.getString("Please enter the student id >");
-        String name = InputReader.getString("Please enter the student name >");
+        System.out.println(" Adding a Song");
+        String title = InputReader.getString("Please enter the song title >");
+        String name = InputReader.getString("Please enter the artist name  >");
+        int count = InputReader.getInt("Please enter the play count > ");
 
-        Student student = new Student(id, name);
-        students.add(student);
+        Song song = new Song(title, name, count);
+        songs.add(song);
     }
 
     private void deleteSong()

@@ -1,5 +1,7 @@
 package CW1;
 
+import java.security.cert.CertificateRevokedException;
+
 public class Song 
 {
     private String id;
@@ -10,6 +12,12 @@ public class Song
 
     private int playCount;
 
+    public Song(String title, String name, int count) 
+    {
+        this.title = title;
+        this.artist = name;
+        this.playCount = count;
+    }
 
     public void print()
     {
