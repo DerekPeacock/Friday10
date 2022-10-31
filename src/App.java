@@ -1,5 +1,5 @@
 import helpers.ConsoleColours;
-import CW1.Songlist;
+import CW1.*;
 
 public class App 
 {
@@ -13,6 +13,6 @@ public class App
         System.out.println(" by Derek Peacock");
         System.out.println();
 
-        Songlist songs = new Songlist();
+        MusicApp app = new MusicApp();
     }
 }

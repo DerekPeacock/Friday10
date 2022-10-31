@@ -1,10 +1,12 @@
 package CW1;
 
-import java.security.cert.CertificateRevokedException;
-
+/**
+ * This class will store the details of a single song
+ * @author Derek Peacock
+ */
 public class Song 
 {
-    private String id;
+    private int id;
 
     private String title;
 
@@ -21,7 +23,7 @@ public class Song
 
     public void print()
     {
-        System.out.println(title + " " + artist + " " + playCount);
+        System.out.println(title + " by " + artist + " plays: " + playCount);
     }
 
 }

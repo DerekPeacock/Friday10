@@ -13,11 +13,11 @@ import helpers.*;
  * 
  * @author: Derek Peacock
  */
-public class Songlist 
+public class MusicApp 
 {
     private ArrayList<Song> songs;
 
-    public Songlist() 
+    public MusicApp() 
     {
         songs = new ArrayList<Song>();
         addSomeSongs();
@@ -26,10 +26,14 @@ public class Songlist
 
     private void addSomeSongs() 
     {
-        Song song = new Song("Bad Habits", "Ed Sheeran", 123456);
+        Song song = new Song("Beautiful", "Anne-Marie", 863015);
         songs.add(song);
 
-        song = new Song(null, null, 0);
+        song = new Song("Bad Habits", "Ed Sheeran", 127191452);
+        songs.add(song);
+
+        song = new Song("Halo", "Beyonce", 991888598);
+        songs.add(song);
     }
 
     private void doMainMenu() 
@@ -67,7 +71,7 @@ public class Songlist
      */
     private void addSong()
     {
-        System.out.println(" Adding a Song");
+        System.out.println(" \nAdding a Song\n");
         String title = InputReader.getString("Please enter the song title >");
         String name = InputReader.getString("Please enter the artist name  >");
         int count = InputReader.getInt("Please enter the play count > ");
@@ -88,11 +92,16 @@ public class Songlist
 
     private void printSongs()
     {
-        System.out.println("\nPrinting All Students\n");
-        
-        for(Student student : students)
+        System.out.println("\nPrinting All Songs\n");
+        int count = 0;
+
+        for(Song song : songs)
         {
-            student.print();
+            count++;
+            System.out.print("Song " + count + ": ");
+            song.print();
         }
+
+        System.out.println();
     }
 }
